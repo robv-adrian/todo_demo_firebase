@@ -1,0 +1,6 @@
+module Pods_StayFitInternMobile_StayFitInternMobileTests {
+  umbrella header "Pods-StayFitInternMobile-StayFitInternMobileTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

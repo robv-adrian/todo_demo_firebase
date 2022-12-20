@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Api": ["src/process/api/"],
+      "Assets": ["src/show/assets/"],
+      "Components": ["src/show/components/"],
+      "Containers": ["src/show/container/"],
+      "Helpers": ["src/process/helpers/"],
+      "Locales": ["src/process/locales/"],
+      "Navigation": ["src/process/navigation"],
+      "Pages": ["src/show/pages/"],
+      "Reducers": ["src/process/reducers/"],
+      "Redux": ["src/process/redux/"],
+      "Repositories": ["src/process/repositories/"],
+      "Routes": ["src/process/routes/"],
+      "Sagas": ["src/process/sagas/"],
+      "Screens": ["src/show/screens"],
+      "Services": ["src/process/services/"],
+      "Subscreens": ["src/show/subscreens/"]
+    }
+  }
+}
