@@ -16,7 +16,6 @@ export const addTodo = function* ({ data }) {
 };
 
 export const addTodoSuccess = function* () {
-  yield alert("Todo Added");
   yield put({ type: TransientTypes.RESET_TRANSIENT });
 };
 

@@ -30,8 +30,6 @@ import {
   updateDoc,
 } from "@firebase/firestore";
 
-import { getStorage, ref, uploadBytesResumable } from "firebase/storage";
-
 const firebaseConfig = {
   apiKey: "AIzaSyCW7_CTsPfkD1_ikJbWk7C7Y34EZxXaEVA",
   authDomain: "fir-test-db5b2.firebaseapp.com",
@@ -47,7 +45,6 @@ const app = initializeApp(firebaseConfig);
 
 const authentication = getAuth(app);
 const database = getFirestore(app);
-const storage = getStorage(app);
 
 const getStore = async (action) => {
   await store().store.dispatch(action);

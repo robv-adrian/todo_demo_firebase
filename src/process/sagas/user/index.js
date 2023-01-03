@@ -57,6 +57,7 @@ export const loginSuccess = function* () {
   });
 };
 export const loginFail = function* () {
+  yield alert("Login failed");
   yield put({ type: "state/RESET" });
 };
 

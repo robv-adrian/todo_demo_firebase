@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   TextInput,
@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import { Button } from "Components";
+import ImagePicker from "react-native-image-crop-picker";
 
 import { updateStateWithProps } from "Helpers";
 
@@ -21,15 +22,39 @@ const SignUp = ({
   updateUserProps,
   isPremium,
 }) => {
+  // const pickPicture = () => {
+  //   ImagePicker.openPicker({
+  //     width: 300,
+  //     height: 400,
+  //     cropping: true,
+  //   }).then((image) => {
+  //     setUri(image.path);
+  //     props.onChange?.(image);
+  //   });
+  // };
+
+  const [uri, setUri] = useState();
+
+  const openCamera = () => {
+    ImagePicker.openCamera({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then((image) => {
+      console.log(image.path);
+      setUri(image.path);
+    });
+  };
+
   return (
     <SafeAreaView>
       <View style={{ display: "flex", alignItems: "center", marginTop: 50 }}>
         <Image
-          source={require("./../../../assets/no_profile_pic.jpg")}
+          source={{ uri }}
           style={{ width: 110, height: 110, borderRadius: 50 }}
         />
         <View style={{ marginTop: 20 }}>
-          <Pressable onPress={() => {}}>
+          <Pressable onPress={openCamera}>
             <Text style={{ fontSize: 20 }}>Upload</Text>
           </Pressable>
         </View>
